@@ -261,12 +261,7 @@ h1, h2, h3 {
   height: 180px;
   object-fit: cover;
 }
-.card:hover img {
-  /* box-shadow: #f4f4f4 0 0 10px; */
-  transform: scale(1.1);
-  transition: ease-in-out 0.3s;
-  color: #00adb5;
-}
+
 
 
 
@@ -374,3 +369,54 @@ footer {
   padding: 100px 20px;
   color: white;
 }
+
+/* Border Animation */
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.animated-border {
+  position: relative;
+  padding: 10px;
+  border-radius: 12px;
+  background: #111; /* Card background */
+  z-index: 1;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  /* background: linear-gradient(90deg, #0fafbd,white,#0fafbd); */
+  background: linear-gradient(245deg, #4285f4, #ea4335, #fbbc05, #34a853, #4285f4);
+  background-size: 400% 400%;
+  animation: borderMove 5s linear infinite;
+  border-radius: 12px;
+  z-index: -1;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
