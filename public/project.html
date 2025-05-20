@@ -4,179 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Joshua | Projects</title>
+  <link rel="stylesheet" href="style.css" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    /* Basic reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0f0f15;
-      color: #f4f4f4;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      max-width: 1100px;
-      width: 90%;
-      margin: auto;
-    }
-
-    /* Navbar */
-    #navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #0f0f15;
-      border-bottom: 1px solid #222;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 60px;
-    }
-
-    .logo a {
-      font-weight: 600;
-      font-size: 1.5rem;
-      color: #00adb5;
-    }
-
-    /* Nav links desktop */
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links a {
-      color: #f4f4f4;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #00adb5;
-    }
-
-    /* Hamburger button */
-    #hamburger {
-      display: none;
-      font-size: 2rem;
-      background: none;
-      border: none;
-      color: #f4f4f4;
-      cursor: pointer;
-    }
-
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: rgba(15, 15, 21, 0.7);
-        width: 220px;
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-        border-radius: 8px 0 0 8px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-        transform: translateX(110%);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        opacity: 0;
-        pointer-events: none;
-        z-index: 999;
-      }
-
-      .nav-links.show {
-        transform: translateX(0);
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      #hamburger {
-        display: block;
-      }
-    }
-
-    /* Section styles */
-    section {
-      padding: 100px 0 50px 0; /* top padding accounts for fixed navbar */
-      text-align: center;
-    }
-
-    h2 {
-      margin-bottom: 2rem;
-      color: #00adb5;
-    }
-
-    /* Cards grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: #16161f;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-content {
-      padding: 1rem;
-    }
-
-    .card-content h3 {
-      margin-bottom: 0.5rem;
-      color: #00adb5;
-    }
-
-    .btn-sm {
-      background: #222;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: background 0.3s ease;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-
-    .btn-sm:hover {
-      background: #00adb5;
-    }
-  </style>
+  
 </head>
 <body>
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="videoplayback.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
   <header id="navbar">
     <div class="container nav-container">
       <h1 class="logo">
@@ -197,14 +34,89 @@
     <h2>Projects</h2>
     <div class="grid">
       <article class="card">
-        <img src="image/project1.jpg" alt="Real-Time Plant Disease" />
-        <div class="card-content">
-          <h3>EV Health Dashboard</h3>
-          <p>Real-time monitoring app with PyQt + MongoDB.</p>
-          <a href="https://github.com/username/ev-dashboard" target="_blank" rel="noopener" class="btn-sm">GitHub</a>
-        </div>
-      </article>
-      <!-- Add more cards as needed -->
+        <div class="animated-border">
+        
+          <img src="image/project1.jpg" alt="Real-Time Plant Disease" />
+          <div class="card-content">
+            <h3>Real-Time Plant Disease Detection using YOLOv8</h3>
+            <p>Designed and implemented a data-driven object detection system to identify tomato plant diseases using YOLOv5.</p>
+
+            
+            <h3 style="color: aqua;"><strong>Key Skill : </strong> Python, PyTorch, YOLOv5, OpenCV, Data Augmentation, Model Evaluation</h3>
+
+            <a href="https://www.linkedin.com/posts/joshua-samraj-j-64a316263_computervision-deeplearning-yolov8-activity-7326973101907288064-B4v-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECnERoBIu1L7kjbLO1q9Zf0eao_7I2kXWc" target="_blank" class="btn-sm">LinkdIn Post</a>
+          </div>
+          </div>
+        </article>
+        <!--‑‑‑‑ Card 2 etc. Add more cards as needed ‑‑‑‑-->
+         <article class="card">
+          <div class="animated-border">
+          <img src="image/p2.png" alt="Real-Time Plant Disease" />
+          <div class="card-content">
+            <h3>Earthquake Data Analysis and Visualization</h3>
+            <p>Analyzed global earthquake datasets to uncover trends in magnitude, depth, and frequency using Pandas and NumPy.</p>
+
+            
+            <h3 style="color: aqua;"><strong>Key Skill : </strong> Python, Pandas, Seaborn, Plotly, Folium, K-Means Clustering, Streamlit, EDA</h3>
+
+            <a href="https://www.linkedin.com/posts/joshua-samraj-j-64a316263_computervision-deeplearning-yolov8-activity-7326973101907288064-B4v-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECnERoBIu1L7kjbLO1q9Zf0eao_7I2kXWc" target="_blank" class="btn-sm">LinkdIn Post</a>
+          </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="animated-border">
+          <img src="image/ambulance.png" alt="Real-Time Plant Disease" />
+          <div class="card-content">
+            <h3>Ambulance detection using image processing</h3>
+            <p>Due to heavy traffic Some time a ambulance was stuck in a traffic in emergency time
+                To avoid that I create a project using computer vision (Image Processing) to detect a
+                ambulance and trigger a alert in traffic signal </p>
+
+            
+            <h3 style="color: aqua;"><strong>Key Skill </strong> Python,Opencv,yolov8,Flask</h3>
+
+            <a href="https://github.com/Joshua-Samraj/ambulance-detection" target="_blank" class="btn-sm">GitHub</a>
+          </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="animated-border">
+          <img src="image/hand.png" alt="Real-Time Plant Disease" />
+          <div class="card-content">
+            <h3>Controlling Home application Using Hand Sign</h3>
+            <p>This project was mostly used for physically Disabled people to Controll a home
+              application Just Using Hand sign </p>
+
+            
+            <h3 style="color: aqua;"><strong>Key Skill </strong> Python,Opencv,Mediapipe,IOT</h3>
+
+            <a href="https://drive.google.com/file/d/1H7BjGmQYX6ZQtQI21GIKjpuy7Ufos3ab/view" target="_blank" class="btn-sm">Patent Published</a>
+          </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="animated-border">
+          <img src="image/dashboard.png" alt="Real-Time Plant Disease" />
+          <div class="card-content">
+            <h3>Supermarket Sales Dashboard</h3>
+            <p>Designed an interactive Supermarket Sales Dashboard in Excel (Power Query, Pivot
+Tables, advanced charting) using 5 000+ rows of transactional CSV data.
+</p>
+
+            
+            <h3 style="color: aqua;"><strong>Key Skill </strong> Python,MS Office,Excel</h3>
+
+            <a href="https://drive.google.com/file/d/1H7BjGmQYX6ZQtQI21GIKjpuy7Ufos3ab/view" target="_blank" class="btn-sm">Patent Published</a>
+          </div>
+          </div>
+        </article>
+
+        
+
+      
+       
     </div>
   </section>
 
