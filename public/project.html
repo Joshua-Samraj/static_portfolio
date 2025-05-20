@@ -4,38 +4,217 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Joshua | Projects</title>
-  <link rel="stylesheet" href="style.css" />
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f15;
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 90%;
+      margin: auto;
+    }
+
+    /* Navbar */
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #0f0f15;
+      border-bottom: 1px solid #222;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .logo a {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #00adb5;
+    }
+
+    /* Nav links desktop */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #f4f4f4;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00adb5;
+    }
+
+    /* Hamburger button */
+    #hamburger {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #f4f4f4;
+      cursor: pointer;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(15, 15, 21, 0.7);
+        width: 220px;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        border-radius: 8px 0 0 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        transform: translateX(110%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
+      }
+
+      .nav-links.show {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      #hamburger {
+        display: block;
+      }
+    }
+
+    /* Section styles */
+    section {
+      padding: 100px 0 50px 0; /* top padding accounts for fixed navbar */
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+      color: #00adb5;
+    }
+
+    /* Cards grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #16161f;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      margin-bottom: 0.5rem;
+      color: #00adb5;
+    }
+
+    .btn-sm {
+      background: #222;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .btn-sm:hover {
+      background: #00adb5;
+    }
+  </style>
 </head>
 <body>
   <header id="navbar">
     <div class="container nav-container">
-      <h1 class="logo"><a href="index.html">Joshua</a></h1>
+      <h1 class="logo">
+        <a href="#home">Joshua <strong style="color: aliceblue;">Samraj</strong><strong style="font-size: 20px;"> Portfolio</strong></a>
+      </h1>
+
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          
+          <!-- Add more nav items here if needed -->
         </ul>
       </nav>
-      <button id="hamburger">&#9776;</button>
+      <button id="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
     </div>
   </header>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <img src="images/ev-dashboard.png" alt="EV dashboard" />
-          <div class="card-content">
-            <h3>EV Health Dashboard</h3>
-            <p>Real-time monitoring app with PyQt + MongoDB.</p>
-            <a href="https://github.com/username/ev-dashboard" target="_blank" class="btn-sm">GitHub</a>
-          </div>
-        </article>
-        <!-- Add more cards as needed -->
-      </div>
+  <section id="projects" class="section container">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="image/project1.jpg" alt="Real-Time Plant Disease" />
+        <div class="card-content">
+          <h3>EV Health Dashboard</h3>
+          <p>Real-time monitoring app with PyQt + MongoDB.</p>
+          <a href="https://github.com/username/ev-dashboard" target="_blank" rel="noopener" class="btn-sm">GitHub</a>
+        </div>
+      </article>
+      <!-- Add more cards as needed -->
     </div>
   </section>
+
+  <script>
+    const burger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    burger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
