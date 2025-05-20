@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script defer src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script defer src="https://unpkg.com/scrollreveal"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <!--‑‑‑‑ Nav ‑‑‑‑-->
+  <header id="navbar">
+    <div class="container nav-container">
+      <h1 class="logo"><a href="#home">Joshua <strong style="color: aliceblue;">Samraj</strong><strong style="font-size: 20px;">Portfolio</strong> </a></h1>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+      </nav>
+      <button id="hamburger">&#9776;</button>
+    </div>
+  </header>
+  <section id="home" class="section hero">
+  <!-- Video background -->
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="videoplayback.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container content">
+    <h2>Hello, I’m <span class="accent">Joshua</span></h2>
+    <h3><span id="typed"></span></h3>
+    <a href="#projects" class="btn">View Work</a>
+  </div>
+</section>
+
+  <!--‑‑‑‑ Home ‑‑‑‑-->
+
+
+  <!--‑‑‑‑ About ‑‑‑‑-->
+  <section id="about" class="section">
+    <div class="container split">
+      <img src="image/my_photo.jpg" alt="Joshua photo" class="avatar" />
+      <div>
+        <h2>About Me</h2>
+        <p>
+          Data Science Aspirant with expertise in Python, machine learning, and AI, backed by hands-on experience in robotics,
+backend development, and real-world data-driven projects. Proficient in tools and frameworks such as Pandas,
+MongoDB, OpenCV, and Streamlit, with a strong ability to translate complex data into actionable insights and deploy
+intelligent solutions.
+        </p>
+        <a href="joshua_resume_new.pdf" class="btn-outline" download>Download My CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!--‑‑‑‑ Skills ‑‑‑‑-->
+  <section id="skills" class="">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill"><span>Python</span><div class="bar" data-level="90"></div></div>
+      <div class="skill"><span>C</span><div class="bar" data-level="80"></div></div>
+      <div class="skill"><span>MySQL</span><div class="bar" data-level="75"></div></div>
+      <div class="skill"><span>Django</span><div class="bar" data-level="70"></div></div>
+      <div class="skill"><span>MongoDB</span><div class="bar" data-level="70"></div></div>
+      <div class="skill"><span>HTML</span><div class="bar" data-level="90"></div></div>
+      <div class="skill"><span>CSS</span><div class="bar" data-level="80"></div></div>
+      <div class="skill"><span>JavaScript</span><div class="bar" data-level="70"></div></div>
+    </div>
+  </section>
+
+  <!--‑‑‑‑ Projects ‑‑‑‑-->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <!--‑‑‑‑ Card 1 ‑‑‑‑-->
+        <article class="card">
+          <img src="image/project1.jpg" alt="Real-Time Plant Disease" />
+          <div class="card-content">
+            <h3>Real-Time Plant Disease Detection using YOLOv8</h3>
+            <p>Designed and implemented a data-driven object detection system to identify tomato plant diseases using YOLOv5.</p>
+
+            
+            <h3><strong>Key Skill : </strong> Python, PyTorch, YOLOv5, OpenCV, Data Augmentation, Model Evaluation</h3>
+
+            <a href="https://www.linkedin.com/posts/joshua-samraj-j-64a316263_computervision-deeplearning-yolov8-activity-7326973101907288064-B4v-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECnERoBIu1L7kjbLO1q9Zf0eao_7I2kXWc" target="_blank" class="btn-sm">LinkdIn Post</a>
+          </div>
+        </article>
+        <!--‑‑‑‑ Card 2 etc. Add more cards as needed ‑‑‑‑-->
+         <article class="card">
+          <img src="image/p2.png" alt="Real-Time Plant Disease" />
+          <div class="card-content">
+            <h3>Earthquake Data Analysis and Visualization</h3>
+            <p>Analyzed global earthquake datasets to uncover trends in magnitude, depth, and frequency using Pandas and NumPy.</p>
+
+            
+            <h3><strong>Key Skill : </strong> Python, Pandas, Seaborn, Plotly, Folium, K-Means Clustering, Streamlit, EDA</h3>
+
+            <a href="https://www.linkedin.com/posts/joshua-samraj-j-64a316263_computervision-deeplearning-yolov8-activity-7326973101907288064-B4v-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECnERoBIu1L7kjbLO1q9Zf0eao_7I2kXWc" target="_blank" class="btn-sm">LinkdIn Post</a>
+          </div>
+        </article>
+      </div>
+      <a href="project.html" class="btn-sm" style="margin-top: 20px;">View Project</a>
+    </div>
+  </section>
+
+  <!--‑‑‑‑ Contact ‑‑‑‑-->
+  
+
+
+</body>
+</html>

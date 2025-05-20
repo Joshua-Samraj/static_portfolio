@@ -1,0 +1,376 @@
+/* ====================
+   Base Styles
+==================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #f4f4f4;
+  background: #0f0f15;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.section.gray {
+  background: #16161f;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+.accent {
+  color: #00adb5;
+}
+
+/* ====================
+   Buttons
+==================== */
+.btn,
+.btn-outline,
+.btn-sm {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn {
+  background: #00adb5;
+  color: #fff;
+}
+
+.btn:hover {
+  filter: brightness(110%);
+}
+
+.btn-outline {
+  border: 2px solid #00adb5;
+  color: #00adb5;
+}
+
+.btn-outline:hover {
+  background: #00adb5;
+  color: #fff;
+}
+
+.btn-sm {
+  background-color: #222;
+  color: #f4f4f4;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-sm:hover {
+  background-color: #00adb5;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+/* ====================
+   Navigation
+==================== */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0f0f15;
+  z-index: 999;
+  border-bottom: 1px solid #222;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  color: #00adb5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #f4f4f4;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00adb5;
+}
+
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+/* ====================
+   Hero Section
+==================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(videoplayback.mp4) center/cover fixed;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 2rem;
+}
+
+/* ====================
+   Split Layout
+==================== */
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00adb5;
+}
+
+/* ====================
+   Skills Section
+==================== */
+.skill {
+  margin: 1rem auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.skill span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+#skills .container {
+  background: rgba(15, 15, 21, 0.75);       /* Slightly stronger opacity for better contrast */
+  backdrop-filter: blur(10px);              /* A bit more blur for smoothness */
+  -webkit-backdrop-filter: blur(10px);      /* For Safari support */
+  text-align: center;
+  margin: 20px auto;                         /* Uniform vertical margin, centered horizontally */
+  padding: 2rem 1.5rem;                      /* Add some padding for inner spacing */
+  border-radius: 20px;
+  max-width: 1100px;                         /* Keep max width consistent */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);/* Soft shadow for depth */
+}
+
+#skills .skill {
+  max-width: 400px;    /* Optional: limit width for better centering */
+  margin: 0 auto 1rem; /* Center block skill div and add spacing */
+  text-align: center;  /* Center text inside each skill */
+}
+
+.bar {
+  height: 10px;
+  background: #222;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  background: #00adb5;
+  transform: translateX(-100%);
+  transition: all 1.5s ease;
+}
+
+/* ====================
+   Projects Grid
+==================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #16161f;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card:hover img {
+  /* box-shadow: #f4f4f4 0 0 10px; */
+  transform: scale(1.1);
+  transition: ease-in-out 0.3s;
+  color: #00adb5;
+}
+
+
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ====================
+   Footer
+==================== */
+footer {
+  padding: 1rem 0;
+  text-align: center;
+  background: #0f0f15;
+  border-top: 1px solid #222;
+  font-size: 0.9rem;
+}
+
+/* ====================
+   Responsive Design
+==================== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: #0f0f15;
+    width: 220px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: translateX(110%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    background: rgba(15, 15, 21, 0.7); /* 70% opacity */
+    backdrop-filter: blur(8px);        /* Optional: blurry background */
+
+    
+    z-index: -1;
+  }
+
+  .nav-links.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #222;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+
+  }
+
+  #hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
+
+
+/* ====================
+   Background Video Styling
+==================== */
+#home {
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: brightness(0.3);
+  pointer-events: none;
+}
+
+#home .content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+}
