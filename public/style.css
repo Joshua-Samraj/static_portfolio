@@ -570,14 +570,21 @@ footer {
   font-size: 20px;
   cursor: pointer;
   z-index: 1001;
-  border-radius: 8px 0 0 8px;
+  border-radius: 10px ;
   transition: right 0.4s ease; /* SMOOTH right + rotate */
 }
 
 /* When sidebar is active */
 #toggleSidebar.active {
+  border-radius: 25px;
   right: 65px; /* Adjust to your sidebar width */
   transform: translateY(-50%) rotate(180deg);
+  transition: 0.4s ease;
+}
+#toggleSidebar.deactive {
+  right: 0px;
+  transform: translateY(-50%) rotate(360deg);
+  transition: 0.4s ease;
 }
 
 /* Tooltip Styling */
