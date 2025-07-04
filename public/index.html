@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joshua | Portfolio</title>
+  
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="footer.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <script defer src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
@@ -29,6 +31,7 @@
       <button id="hamburger">&#9776;</button>
     </div>
   </header>
+
   <section id="home" class="section hero">
   <!-- Video background -->
   <video autoplay muted loop playsinline class="background-video">
@@ -44,12 +47,54 @@
 </section>
 
   <!--‑‑‑‑ Home ‑‑‑‑-->
+<!-- Social Media Sidebar -->
+<div class="social-sidebar">
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/joshua-samraj-j-64a316263/" class="socialContainer containerThree" target="_blank" aria-label="LinkedIn">
+    <svg class="socialSvg" viewBox="0 0 448 512">
+      <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+    </svg>
+  </a>
+
+  <!-- WhatsApp -->
+  
+  <!-- GitHub -->
+  <!-- GitHub -->
+  <a href="https://github.com/Joshua-Samraj" class="socialContainer containerGit" target="_blank" aria-label="GitHub">
+    <svg class="socialSvg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 .297C5.37.297 0 5.667 0 12.297c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.776.42-1.305.763-1.605-2.665-.3-5.467-1.335-5.467-5.933 0-1.31.468-2.383 1.235-3.223-.123-.302-.535-1.518.117-3.165 0 0 1.008-.322 3.3 1.23a11.48 11.48 0 0 1 3-.403c1.02.005 2.045.138 3 .403 2.29-1.553 3.295-1.23 3.295-1.23.654 1.647.243 2.863.12 3.165.77.84 1.233 1.913 1.233 3.223 0 4.61-2.807 5.63-5.48 5.922.43.37.823 1.1.823 2.222v3.293c0 .32.217.694.825.576C20.565 22.092 24 17.592 24 12.297 24 5.667 18.627.297 12 .297z"/>
+    </svg>
+  </a>
+  
+  
+  <!-- LeetCode -->
+  <a href="https://leetcode.com/u/JOSHUA_SAMRAJ/" class="socialContainer containerLC" target="_blank" aria-label="LeetCode">
+    <img src="image/leetcode.png" alt="LeetCode" style="width: 26px; height: 26px;" />
+  </a>
+  
+  <a href="https://wa.me/7305955939" class="socialContainer containerFour" aria-label="WhatsApp">
+    <svg class="socialSvg" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
+    </svg>
+  </a>
+</div>
 
 
   <!--‑‑‑‑ About ‑‑‑‑-->
   <section id="about" class="section">
-    <div class="container split">
-      <img src="image/my_photo.jpg" alt="Joshua photo" class="avatar" />
+        
+  <img src="image/my_photo.jpg" alt="Joshua photo" class="avatar" />
+
+
+
+
+    <!-- <div class="card"> -->
+
+    <!-- </div>              -->
+
+
+
       <div>
         <h2>About Me</h2>
         <p>
@@ -62,6 +107,7 @@ intelligent solutions.
       </div>
     </div>
   </section>
+
 
   <!--‑‑‑‑ Skills ‑‑‑‑-->
   <section id="skills" class="">
@@ -113,10 +159,22 @@ intelligent solutions.
       <a href="project.html" class="btn-sm" style="margin-top: 20px;">View Project</a>
     </div>
   </section>
+  <!--‑‑‑‑ Footer ‑‑‑‑-->
+<footer class="footer">
+  <div class="container footer-content">
+    
+    <div class="social-buttons">
+      <a href="https://www.linkedin.com/in/joshua-samraj-j-64a316263/" target="_blank" class="social-btn linkedin">LinkedIn</a>
+      <a href="https://github.com/Joshua-Samraj" target="_blank" class="social-btn github">GitHub</a>
+      <a href="tel: 7305955939"  class="social-btn contact">Contact</a>
+    </div>
+  </div>
+</footer>
 
-  <!--‑‑‑‑ Contact ‑‑‑‑-->
-  
+
+
 
 
 </body>
 </html>
+
