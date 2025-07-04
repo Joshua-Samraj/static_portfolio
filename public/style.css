@@ -494,3 +494,130 @@ footer {
 .bar.in-view::after {
   animation: fillBar 1.5s forwards;
 }
+
+/* Tooltip container */
+.socialContainer {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+/* Tooltip text */
+.tooltip {
+  position: absolute;
+  top: 50%;
+  right: 110%;
+  transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+}
+
+/* Show tooltip on hover */
+.socialContainer:hover .tooltip {
+  opacity: 1;
+  animation: slideIn 0.4s ease forwards;
+}
+
+/* Slide-in animation from right to left */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%) translateX(20px);
+  }
+  to {
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+
+/* Social Sidebar */
+.social-sidebar {
+  position: fixed;
+  right: -220px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #1a1a1a;
+  padding: 12px;
+  border-radius: 8px 0 0 8px;
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+.social-sidebar.active {
+  right: 0;
+}
+
+/* Floating Toggle Arrow */
+#toggleSidebar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 8px 0 0 8px;
+  transition: right 0.4s ease, transform 0.4s ease; /* SMOOTH right + rotate */
+}
+
+/* When sidebar is active */
+#toggleSidebar.active {
+  right: 65px; /* Adjust to your sidebar width */
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: absolute;
+  left: -130px;
+  top: 50%;
+  transform: translateY(-50%) translateX(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.socialContainer {
+  position: relative;
+}
+
+.socialContainer:hover .tooltip {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .tooltip {
+    display: none;
+  }
+
+  #toggleSidebar {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .social-sidebar {
+    padding: 8px;
+    gap: 12px;
+  }
+}
