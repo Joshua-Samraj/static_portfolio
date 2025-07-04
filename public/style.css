@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
   color: #f4f4f4;
   background: #0f0f15;
-  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 html {
@@ -96,7 +96,6 @@ h1, h2, h3 {
   transform: scale(1.05);
 }
 
-
 /* ====================
    Navigation
 ==================== */
@@ -105,7 +104,7 @@ h1, h2, h3 {
   top: 0;
   width: 100%;
   background: #0f0f15;
-  z-index: 999;
+  z-index: 1000; /* Higher z-index for navbar */
   border-bottom: 1px solid #222;
 }
 
@@ -145,6 +144,7 @@ h1, h2, h3 {
   border: none;
   color: #fff;
   font-size: 1.8rem;
+  cursor: pointer;
 }
 
 /* ====================
@@ -155,7 +155,7 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(videoplayback.mp4) center/cover fixed;
+  position: relative;
 }
 
 .hero h2 {
@@ -189,33 +189,28 @@ h1, h2, h3 {
 /* ====================
    Skills Section
 ==================== */
+#skills .container {
+  background: rgba(15, 15, 21, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  margin: 20px auto;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  max-width: 1100px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
 .skill {
   margin: 1rem auto;
-  max-width: 600px;
-  text-align: left;
+  max-width: 400px;
+  text-align: center;
 }
 
 .skill span {
   display: block;
   font-weight: 600;
   margin-bottom: 0.3rem;
-}
-#skills .container {
-  background: rgba(15, 15, 21, 0.75);       /* Slightly stronger opacity for better contrast */
-  backdrop-filter: blur(10px);              /* A bit more blur for smoothness */
-  -webkit-backdrop-filter: blur(10px);      /* For Safari support */
-  text-align: center;
-  margin: 20px auto;                         /* Uniform vertical margin, centered horizontally */
-  padding: 2rem 1.5rem;                      /* Add some padding for inner spacing */
-  border-radius: 20px;
-  max-width: 1100px;                         /* Keep max width consistent */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);/* Soft shadow for depth */
-}
-
-#skills .skill {
-  max-width: 400px;    /* Optional: limit width for better centering */
-  margin: 0 auto 1rem; /* Center block skill div and add spacing */
-  text-align: center;  /* Center text inside each skill */
 }
 
 .bar {
@@ -230,8 +225,13 @@ h1, h2, h3 {
   display: block;
   height: 100%;
   background: #00adb5;
-  transform: translateX(-100%);
-  transition: all 1.5s ease;
+  width: 0;
+  transition: width 1.5s ease;
+}
+
+/* Activate animation when element is in view */
+.bar.in-view::after {
+  width: var(--level); /* This should be set via JavaScript based on data-level */
 }
 
 /* ====================
@@ -244,12 +244,15 @@ h1, h2, h3 {
   margin-top: 2rem;
 }
 
+/* Consolidated card styles */
 .card {
   background: #16161f;
-  border-radius: 6px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s;
+  position: relative;
+  width: 100%;
 }
 
 .card:hover {
@@ -262,161 +265,232 @@ h1, h2, h3 {
   object-fit: cover;
 }
 
-
-
-
 .card-content {
   padding: 1rem;
 }
 
-.card-content h3 {
+/* .card-content h3 {
   margin-bottom: 0.5rem;
-}
+} */
 
 /* ====================
-   Footer
+   Background Video
 ==================== */
-footer {
-  padding: 1rem 0;
-  text-align: center;
-  background: #0f0f15;
-  border-top: 1px solid #222;
-  font-size: 0.9rem;
-}
-
-/* ====================
-   Responsive Design
-==================== */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    background: #0f0f15;
-    width: 220px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    gap: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    transform: translateX(110%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-    background: rgba(15, 15, 21, 0.7); /* 70% opacity */
-    backdrop-filter: blur(8px);        /* Optional: blurry background */
-
-    
-    z-index: -1;
-  }
-
-  .nav-links.show {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-  .nav-links a {
-    width: 100%;
-    padding: 0.5rem 0;
-    font-size: 1rem;
-    border-bottom: 1px solid #222;
-    transition: color 0.3s;
-  }
-
-  .nav-links a:last-child {
-    border-bottom: none;
-
-  }
-
-  #hamburger {
-    display: block;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.8rem;
-    cursor: pointer;
-    z-index: 1000;
-  }
-}
-
-
-/* ====================
-   Background Video Styling
-==================== */
-#home {
-  position: relative;
-  overflow: hidden;
-  color: white;
-}
-
 .background-video {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   transform: translate(-50%, -50%);
   z-index: -1;
   filter: brightness(0.3);
   pointer-events: none;
 }
 
-#home .content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 100px 20px;
-  color: white;
+/* ====================
+   Social Icons
+==================== */
+/* Social Media Sidebar */
+.social-sidebar {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+  background: rgba(15, 15, 21, 0.75);
+  padding: 12px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  animation: slide-in-top 0.8s ease;
 }
 
-/* Border Animation */
-.card {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
+.social-sidebar .socialContainer {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffffdd;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+  cursor: pointer;
+  box-shadow: 0 0 0 transparent;
 }
 
-.animated-border {
-  position: relative;
-  padding: 10px;
-  border-radius: 12px;
-  background: #111; /* Card background */
-  z-index: 1;
+.social-sidebar .socialContainer svg {
+  width: 24px;
+  height: 24px;
+  fill: #111;
+  transition: fill 0.3s ease;
 }
 
-.animated-border::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  padding: 2px;
-  /* background: linear-gradient(90deg, #0fafbd,white,#0fafbd); */
-  background: linear-gradient(245deg, #4285f4, #ea4335, #fbbc05, #34a853, #4285f4);
-  background-size: 400% 400%;
-  animation: borderMove 5s linear infinite;
-  border-radius: 12px;
-  z-index: -1;
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: destination-out;
-  pointer-events: none;
-  box-sizing: border-box;
+.social-sidebar .socialContainer:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
-@keyframes borderMove {
-  0% {
-    background-position: 0% 50%;
+.containerOne:hover {
+  background-color: #e1306c;
+}
+.containerTwo:hover {
+  background-color: #1da1f2;
+}
+.containerThree:hover {
+  background-color: #0077b5;
+}
+.containerFour:hover {
+  background-color: #25d366;
+}
+
+.containerOne:hover svg,
+.containerTwo:hover svg,
+.containerThree:hover svg,
+.containerFour:hover svg {
+  fill: #fff;
+}
+.containerGit:hover {
+  background-color: #333; /* GitHub black */
+}
+.containerLC:hover {
+  background-color: #FFA116; /* LeetCode orange */
+}
+
+
+/* Mobile Responsive */
+/* @media (max-width: 768px) {
+  .social-sidebar {
+    flex-direction: row;
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 10px 14px;
+    gap: 10px;
   }
-  50% {
-    background-position: 100% 50%;
+
+  .social-sidebar .socialContainer {
+    width: 45px;
+    height: 45px;
+
+  }
+} */
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-60px);
+    opacity: 0;
   }
   100% {
-    background-position: 0% 50%;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
+/* ====================
+   Footer
+==================== */
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  background: #0f0f15;
+  border-top: 1px solid #222;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+}
+
+.linkedin { background-color: #0077b5; }
+.github { background-color: #333; }
+.contact { background-color: #00adb5; }
+
+/* ====================
+   Responsive Design
+==================== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: rgba(15, 15, 21, 0.95);
+    width: 220px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 0 0 0 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 998;
+  }
+
+  .nav-links.show {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  #hamburger {
+    display: block;
+    z-index: 999;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero h3 {
+    font-size: 1.2rem;
+  }
+
+  .split {
+    flex-direction: column;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Animation for skill bars when in view */
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--level); }
+}
+
+.bar.in-view::after {
+  animation: fillBar 1.5s forwards;
+}
