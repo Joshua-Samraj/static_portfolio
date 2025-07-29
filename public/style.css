@@ -294,7 +294,7 @@ h1, h2, h3 {
    Social Icons
 ==================== */
 /* Social Media Sidebar */
-.social-sidebar {
+/* .social-sidebar {
   position: fixed;
   right: 10px;
   top: 50%;
@@ -309,7 +309,7 @@ h1, h2, h3 {
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   animation: slide-in-top 0.8s ease;
-}
+} */
 
 .social-sidebar .socialContainer {
   width: 50px;
@@ -627,4 +627,53 @@ footer {
     padding: 8px;
     gap: 12px;
   }
+}
+
+
+#typed .ti-cursor {
+  color: #00adb5;
+  font-size: 2em;       /* Extra large */
+  font-weight: 900;     /* Maximum thickness */
+
+
+  animation: blink 0.8s steps(1) infinite;
+}
+
+
+.socialSvg {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.socialContainer:hover .socialSvg {
+  transform: scale(1.1);
+}
+
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  margin: 6px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
 }
