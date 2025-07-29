@@ -7,17 +7,20 @@
   
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="gmail.css" />
+  <link rel="stylesheet" href="skiil.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <script defer src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   <script defer src="https://unpkg.com/scrollreveal"></script>
+
   <script defer src="main.js"></script>
 </head>
 <body>
   <!--‑‑‑‑ Nav ‑‑‑‑-->
   <header id="navbar">
     <div class="container nav-container">
-      <h1 class="logo"><a href="#home">Joshua |<strong style="color: aliceblue;">|Samraj |</strong>| <strong style="font-size: 20px;">Portfolio</strong> </a></h1>
+      <h1 class="logo"><a href="#home">Joshua <strong style="color: aliceblue;">Samraj |</strong>| <strong style="font-size: 20px;">Portfolio</strong> </a></h1>
       
       <nav>
         <ul class="nav-links">
@@ -74,6 +77,12 @@
       <path d="M12 .297C5.37.297 0 5.667 0 12.297c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.776.42-1.305.763-1.605-2.665-.3-5.467-1.335-5.467-5.933 0-1.31.468-2.383 1.235-3.223-.123-.302-.535-1.518.117-3.165 0 0 1.008-.322 3.3 1.23a11.48 11.48 0 0 1 3-.403c1.02.005 2.045.138 3 .403 2.29-1.553 3.295-1.23 3.295-1.23.654 1.647.243 2.863.12 3.165.77.84 1.233 1.913 1.233 3.223 0 4.61-2.807 5.63-5.48 5.922.43.37.823 1.1.823 2.222v3.293c0 .32.217.694.825.576C20.565 22.092 24 17.592 24 12.297 24 5.667 18.627.297 12 .297z"/>
     </svg>
   </a>
+    <button type="button" id="gmailPopupBtn" class="socialContainer containerGmail" aria-label="Gmail">
+      <span class="tooltip">Gmail</span>
+      <img src="image/gmail_2.svg" alt="Gmail" class="socialSvg" />
+    </button>
+
+
   
   
   <!-- LeetCode -->
@@ -82,7 +91,7 @@
     <img src="image/leetcode.png" alt="LeetCode" style="width: 26px; height: 26px;" />
   </a>
   
-  <a href="https://wa.me/7305955939" class="socialContainer containerFour" aria-label="WhatsApp">
+  <a href="https://wa.me/7305955939" class="socialContainer containerFour" target="_blank"  aria-label="WhatsApp">
      <span class="tooltip">WhatsApp</span>
     <svg class="socialSvg" viewBox="0 0 16 16">
       <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
@@ -118,22 +127,427 @@ intelligent solutions.
     </div>
   </section>
 
-
-  <!--‑‑‑‑ Skills ‑‑‑‑-->
-  <section id="skills" class="">
+<section id="skills" class="">
     <div class="container">
       <h2>Skills</h2>
-      <div class="skill"><span>Python</span><div class="bar" data-level="90"></div></div>
-      <div class="skill"><span>C</span><div class="bar" data-level="80"></div></div>
-      <div class="skill"><span>MySQL</span><div class="bar" data-level="75"></div></div>
-      <div class="skill"><span>Django</span><div class="bar" data-level="70"></div></div>
-      <div class="skill"><span>MongoDB</span><div class="bar" data-level="70"></div></div>
-      <div class="skill"><span>HTML</span><div class="bar" data-level="90"></div></div>
-      <div class="skill"><span>CSS</span><div class="bar" data-level="80"></div></div>
-      <div class="skill"><span>JavaScript</span><div class="bar" data-level="70"></div></div>
+      <div class="skills-grid">
+        <div class="skill-item floating">
+          <div class="skill-gauge" data-level="90">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-base" cx="60" cy="60" r="54"></circle>
+              <circle class="gauge-arc" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="tooltip">90%</div>
+          </div>
+          <span>Python</span>
+        </div>
+        
+        <div class="skill-item floating" style="animation-delay: 0.2s">
+          <div class="skill-gauge" data-level="80">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-base" cx="60" cy="60" r="54"></circle>
+              <circle class="gauge-arc" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="tooltip">80%</div>
+          </div>
+          <span>C</span>
+        </div>
+        
+        <div class="skill-item floating" style="animation-delay: 0.4s">
+          <div class="skill-gauge" data-level="75">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-base" cx="60" cy="60" r="54"></circle>
+              <circle class="gauge-arc" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="tooltip">75%</div>
+          </div>
+          <span>MySQL</span>
+        </div>
+        
+        <div class="skill-item floating" style="animation-delay: 0.6s">
+          <div class="skill-gauge" data-level="80">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-base" cx="60" cy="60" r="54"></circle>
+              <circle class="gauge-arc" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="tooltip">80%</div>
+          </div>
+          <span>Selenium</span>
+        </div>
+        
+        <div class="skill-item floating" style="animation-delay: 0.8s">
+          <div class="skill-gauge" data-level="70">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-base" cx="60" cy="60" r="54"></circle>
+              <circle class="gauge-arc" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="tooltip">70%</div>
+          </div>
+          <span>Django</span>
+        </div>
+        
+        <div class="skill-item floating" style="animation-delay: 1.0s">
+          <div class="skill-gauge" data-level="70">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-base" cx="60" cy="60" r="54"></circle>
+              <circle class="gauge-arc" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="tooltip">70%</div>
+          </div>
+          <span>MongoDB</span>
+        </div>
+        
+        <div class="skill-item floating" style="animation-delay: 1.2s">
+          <div class="skill-gauge" data-level="90">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-base" cx="60" cy="60" r="54"></circle>
+              <circle class="gauge-arc" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="tooltip">90%</div>
+          </div>
+          <span>HTML</span>
+        </div>
+        
+        <div class="skill-item floating" style="animation-delay: 1.4s">
+          <div class="skill-gauge" data-level="80">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-base" cx="60" cy="60" r="54"></circle>
+              <circle class="gauge-arc" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="tooltip">80%</div>
+          </div>
+          <span>CSS</span>
+        </div>
+        
+        <div class="skill-item floating" style="animation-delay: 1.6s">
+          <div class="skill-gauge" data-level="70">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-base" cx="60" cy="60" r="54"></circle>
+              <circle class="gauge-arc" cx="60" cy="60" r="54"></circle>
+            </svg>
+            <div class="tooltip">70%</div>
+          </div>
+          <span>JavaScript</span>
+        </div>
+      </div>
     </div>
   </section>
 
+  <style>
+    #skills {
+      padding: 60px 0;
+      background: transparent;
+      position: relative;
+    }
+    
+    /* Optional: Add a subtle gradient overlay for better visibility */
+    #skills::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+      z-index: -1;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    #skills h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+    
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .skill-gauge {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+    }
+    
+    .skill-gauge img {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+      transition: all 0.3s ease;
+    }
+    
+    .gauge {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+    
+    .gauge-base {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.2);
+      stroke-width: 8;
+      stroke-dasharray: 339;
+      stroke-dashoffset: 0;
+    }
+    
+    .gauge-arc {
+      fill: none;
+      stroke: #4CAF50;
+      stroke-width: 8;
+      stroke-dasharray: 339;
+      stroke-linecap: round;
+      transition: all 0.5s ease-out;
+    }
+    
+    .skill-item span {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      margin-top: 10px;
+    }
+    
+    /* Tooltip styles */
+    .tooltip {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100%) scale(0.8);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      z-index: 10;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px 5px 0;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, 0.7) transparent transparent;
+    }
+    
+    /* Floating animation */
+    .floating {
+      animation: floating 6s ease-in-out infinite;
+      transform: translateY(0px);
+    }
+    
+    @keyframes floating {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(3deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    
+    /* Hover effects */
+    .skill-item:hover {
+      transform: scale(1.08) translateY(-10px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .skill-item:hover .gauge-arc {
+      stroke-width: 10;
+      filter: drop-shadow(0 0 12px rgba(76, 175, 80, 0.6));
+    }
+    
+    .skill-item:hover img {
+      transform: translate(-50%, -50%) scale(1.15);
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+    }
+    
+    .skill-item:hover .tooltip {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-100%) scale(1);
+    }
+
+
+        /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+      #skills {
+        padding: 40px 0;
+      }
+      
+      #skills h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+      
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 20px;
+      }
+      
+      .skill-item {
+        padding: 15px;
+        border-radius: 15px;
+      }
+      
+      .skill-gauge {
+        width: 90px;
+        height: 90px;
+      }
+      
+      .skill-gauge img {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .gauge-base, .gauge-arc {
+        stroke-width: 6;
+      }
+      
+      .skill-item span {
+        font-size: 1rem;
+      }
+      
+      /* Adjust floating animation for mobile */
+      .floating {
+        animation: floating-mobile 6s ease-in-out infinite;
+      }
+      
+      @keyframes floating-mobile {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(2deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+      
+      /* Smaller tooltips for mobile */
+      .tooltip {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
+    }
+
+    /* Extra small devices (phones, 480px and down) */
+    @media (max-width: 480px) {
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 15px;
+      }
+      
+      .skill-gauge {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .skill-gauge img {
+        width: 40px;
+        height: 40px;
+      }
+      
+      #skills h2 {
+        font-size: 1.8rem;
+      }
+      
+      .skill-item {
+        padding: 12px;
+      }
+      
+      .skill-item span {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very small devices (phones, 360px and down) */
+    @media (max-width: 360px) {
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 12px;
+      }
+      
+      .skill-gauge {
+        width: 70px;
+        height: 70px;
+      }
+      
+      .skill-gauge img {
+        width: 35px;
+        height: 35px;
+      }
+      
+      .gauge-base, .gauge-arc {
+        stroke-width: 5;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const gauges = document.querySelectorAll('.skill-gauge');
+      
+      gauges.forEach(gauge => {
+        const level = gauge.getAttribute('data-level');
+        const arc = gauge.querySelector('.gauge-arc');
+        
+        // Calculate the dash offset based on skill level (339 is circumference approximation)
+        const offset = 339 - (339 * level / 100);
+        arc.style.strokeDashoffset = offset;
+        
+        // Change color based on level
+        if(level >= 80) {
+          arc.style.stroke = '#4CAF50'; // green
+        } else if(level >= 60) {
+          arc.style.stroke = '#2196F3'; // blue
+        } else {
+          arc.style.stroke = '#FF9800'; // orange
+        }
+      });
+    });
+  </script>
   <!--‑‑‑‑ Projects ‑‑‑‑-->
   <section id="projects" class="section">
     <div class="container">
@@ -141,15 +555,15 @@ intelligent solutions.
       <div class="grid">
         <!--‑‑‑‑ Card 1 ‑‑‑‑-->
         <article class="card">
-          <img src="image/project1.jpg" alt="Real-Time Plant Disease" />
+          <img src="image/i.png" alt="Real-Time Plant Disease" />
           <div class="card-content">
-            <h3>Real-Time Plant Disease Detection using YOLOv8</h3>
-            <p>Designed and implemented a data-driven object detection system to identify tomato plant diseases using YOLOv5.</p>
+            <h3>🛡️ AI vs Real Image Classifier – A Step Toward Digital Content Security 🔍</h3>
+            <p>Built a Django-powered AI vs Real Image Classifier using CNNs to verify image authenticity with animations, audio cues, and security-focused features.</p>
 
             
             <h3 style="color: aqua;"><strong>Key Skill : </strong> Python, PyTorch, YOLOv5, OpenCV, Data Augmentation, Model Evaluation</h3>
 
-            <a href="https://www.linkedin.com/posts/joshua-samraj-j-64a316263_computervision-deeplearning-yolov8-activity-7326973101907288064-B4v-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECnERoBIu1L7kjbLO1q9Zf0eao_7I2kXWc" target="_blank" class="btn-sm">LinkdIn Post</a>
+            <a href="https://www.linkedin.com/posts/joshua-samraj-j-64a316263_ai-cybersecurity-deeplearning-activity-7348013030267375616-4Wh9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECnERoBIu1L7kjbLO1q9Zf0eao_7I2kXWc" target="_blank" class="btn-sm">LinkdIn Post</a>
           </div>
         </article>
         <!--‑‑‑‑ Card 2 etc. Add more cards as needed ‑‑‑‑-->
@@ -169,17 +583,40 @@ intelligent solutions.
       <a href="project.html" class="btn-sm" style="margin-top: 20px;">View Project</a>
     </div>
   </section>
+
+
+  <div id="gmailPopup" class="gmail-popup">
+  <div class="gmail-card">
+    <h3>Send me an email</h3>
+    <form id="gmailForm">
+      <input type="email" id="userEmail" placeholder="Your Email" required />
+      <input type="text" id="emailSubject" placeholder="Subject" required />
+      <textarea id="emailMessage" placeholder="Your Message" required></textarea>
+      <div class="popup-buttons">
+        <button type="submit">Send</button>
+        <button type="button" id="closePopup">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
   <!--‑‑‑‑ Footer ‑‑‑‑-->
 <footer class="footer">
   <div class="container footer-content">
-    
     <div class="social-buttons">
       <a href="https://www.linkedin.com/in/joshua-samraj-j-64a316263/" target="_blank" class="social-btn linkedin">LinkedIn</a>
       <a href="https://github.com/Joshua-Samraj" target="_blank" class="social-btn github">GitHub</a>
-      <a href="tel: 7305955939"  class="social-btn contact">Contact</a>
+      <a href="tel:7305955939" class="social-btn contact">Contact</a>
+
+      <!-- Gmail Button without tooltip -->
+      <button type="button" id="gmailPopupBtnFooter" class="social-btn github" aria-label="Gmail">
+        <img src="image/gmail_2.svg" alt="Gmail" class="socialSvg" />
+      </button>
     </div>
   </div>
 </footer>
+
+
 <script>
   const toggleBtn = document.getElementById('toggleSidebar');
   const sidebar = document.getElementById('socialSidebar');
@@ -187,11 +624,37 @@ intelligent solutions.
   toggleBtn.addEventListener('click', () => {
     sidebar.classList.toggle('active');
     toggleBtn.classList.toggle('active');
-
+    
   });
 </script>
+<script>
+  const gmailBtns = document.querySelectorAll('#gmailPopupBtn, #gmailPopupBtnFooter');
+  const gmailPopup = document.getElementById('gmailPopup');
+  const closePopup = document.getElementById('closePopup');
+  const gmailForm = document.getElementById('gmailForm');
 
+  gmailBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      gmailPopup.classList.add('active');
+    });
+  });
 
+  closePopup.addEventListener('click', () => {
+    gmailPopup.classList.remove('active');
+  });
+
+  gmailForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = "j.joshuasamraj@gmail.com";
+    const userEmail = document.getElementById('userEmail').value;
+    const subject = encodeURIComponent(document.getElementById('emailSubject').value);
+    const message = encodeURIComponent(`From: ${userEmail}\n\n${document.getElementById('emailMessage').value}`);
+    
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${message}`;
+    window.location.href = mailtoLink;
+    gmailPopup.classList.remove('active');
+  });
+</script>
 
 
 
