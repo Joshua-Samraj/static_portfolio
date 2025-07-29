@@ -1,0 +1,56 @@
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+  /* background-attachment: fixed; */
+  /* position: fixed; */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.social-btn.linkedin {
+  background-color: #0077b5;
+}
+
+.social-btn.linkedin:hover {
+  background-color: #005582;
+}
+
+.social-btn.github {
+  background-color: #333;
+}
+
+.social-btn.github:hover {
+  background-color: #000;
+}
+.social-btn.contact {
+  background-color: #fff;
+  color: #111;
+}
+
+.social-btn.contact:hover {
+  background-color: #111;
+  color: #fff;
+}
